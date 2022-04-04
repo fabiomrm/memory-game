@@ -1,8 +1,12 @@
 import * as Styled from "./styles";
 import { ReactComponent as LogoIcon } from "./assets/images/b7.svg";
+import { ReactComponent as RestartIcon } from "./assets/images/restart.svg";
 import { InfoItem } from "./components/InfoItem";
+import { Button } from "./components/Button";
 
 function App() {
+  const handleResetAndCreateGrid = () => {};
+
   return (
     <Styled.Container>
       <Styled.Info>
@@ -13,7 +17,11 @@ function App() {
           <InfoItem label="Tempo" value="00:00" />
           <InfoItem label="Movimentos" value="0" />
         </Styled.InfoArea>
-        <button>REINICIAR</button>
+        <Button
+          label="Reiniciar"
+          icon={<RestartIcon />}
+          onClick={handleResetAndCreateGrid}
+        />
       </Styled.Info>
       <Styled.GridArea>...</Styled.GridArea>
     </Styled.Container>
