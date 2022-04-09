@@ -26,7 +26,13 @@ export const IconArea = styled.div`
     & svg {
         width: 20px;
         height: 20px;
-        
+    }
+
+    @media(max-width: 750px) {
+        svg {
+        width:15px;
+        height:15px; 
+        }
     }
 `;
 
